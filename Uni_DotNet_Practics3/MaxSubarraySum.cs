@@ -10,7 +10,16 @@ namespace Uni_DotNet_Practics3
     {
         public int FindMaxSum(int[] nums)
         {
-            // Write your code here
+            int maxSum = nums[0];
+            int currentSum = nums[0];
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                currentSum = Math.Max(nums[i], currentSum + nums[i]);
+                maxSum = Math.Max(maxSum, currentSum);
+            }
+
+            return maxSum;
         }
     }
 

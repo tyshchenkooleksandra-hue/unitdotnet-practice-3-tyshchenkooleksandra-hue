@@ -10,8 +10,17 @@ namespace Uni_DotNet_Practics3
     {
         public int CountVowels(string input)
         {
-            // Write your code here
+            int count = 0;
+
+            foreach (char c in input.ToLower())
+            {
+                if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
     }
-
 }

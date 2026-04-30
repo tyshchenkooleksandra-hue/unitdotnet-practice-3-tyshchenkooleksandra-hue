@@ -10,7 +10,14 @@ namespace Uni_DotNet_Practics3
     {
         public int SumOfEvens(int n)
         {
-            // Write your code here
+            int sum = 0;
+
+            for (int i = 2; i <= n; i += 2)
+            {
+                sum += i;
+            }
+
+            return sum;
         }
     }
 

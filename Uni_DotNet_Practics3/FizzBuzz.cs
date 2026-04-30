@@ -10,8 +10,29 @@ namespace Uni_DotNet_Practics3
     {
         public List<string> RunFizzBuzz()
         {
-            // Write your code here
+            var result = new List<string>();
+
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    result.Add("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    result.Add("Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    result.Add("Buzz");
+                }
+                else
+                {
+                    result.Add(i.ToString());
+                }
+            }
+
+            return result;
         }
     }
-
 }

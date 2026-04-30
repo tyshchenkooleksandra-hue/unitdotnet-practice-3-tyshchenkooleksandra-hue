@@ -10,7 +10,20 @@ namespace Uni_DotNet_Practics3
     {
         public bool IsPrime(int number)
         {
-            // Write your code here
+            if (number <= 1)
+            {
+                return false;
+            }
+
+            for (int i = 2; i * i <= number; i++)
+            {
+                if (number % i == 0)
+                {
+                    return false;
+                }     
+            }
+
+            return true;
         }
     }
 

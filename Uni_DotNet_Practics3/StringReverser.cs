@@ -10,7 +10,22 @@ namespace Uni_DotNet_Practics3
     {
         public string ReverseString(string s)
         {
-            // Write your code here
+            char[] chars = s.ToCharArray();
+
+            int left = 0;
+            int right = chars.Length - 1;
+
+            while (left < right)
+            {
+                char temp = chars[left];
+                chars[left] = chars[right];
+                chars[right] = temp;
+
+                left++;
+                right--;
+            }
+
+            return new string(chars);
         }
     }
 
